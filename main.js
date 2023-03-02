@@ -25,8 +25,10 @@ submit.onclick = function (eo) {
   }
 
   console.log(Mood);
+  localStorage.setItem("Task",JSON.stringify(todo))
   Read();
   Clear()
+
 };
 function Read() {
   let card = "";
