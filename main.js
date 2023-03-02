@@ -2,8 +2,9 @@ const task = document.getElementById("Task");
 const desc = document.getElementById("Desc");
 const date = document.getElementById("date");
 const submit = document.getElementById("submit");
+let todo = JSON.parse(localStorage.getItem("Task")) || [];
+console.log(todo)
 
-const todo = [];
 let mediator;
 let Mood;
 
@@ -24,8 +25,10 @@ submit.onclick = function (eo) {
     todo.push(newTOdo);
   }
 
-  console.log(Mood);
-  localStorage.setItem("Task",JSON.stringify(todo))
+  const oldTodos = JSON.parse(localStorage.getItem('Task')) || [];
+  // console.log(oldTodos)
+  oldTodos.push(newTOdo);
+  localStorage.setItem("Task",JSON.stringify(oldTodos));
   Read();
   Clear()
 
