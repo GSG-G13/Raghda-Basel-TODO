@@ -3,7 +3,6 @@ const desc = document.getElementById("Desc");
 const date = document.getElementById("date");
 const submit = document.getElementById("submit");
 const todo = [];
-console.log(task, desc, date, submit);
 
 // sumbit data
 submit.onclick = function (eo) {
@@ -14,5 +13,20 @@ submit.onclick = function (eo) {
     date: date.value,
   };
   todo.push(newTOdo);
-  console.log(todo);
+  Read();
 };
+function Read (){
+  let card ="";
+  todo.forEach((element,index)=> {
+    card+=`
+    <li id="list">${element.task}
+    <span>${element.desc}</span>
+    <span>${element.date}</span>
+    <button id="edit">edit</button>
+    <button id="delete">Delete</button>
+</li>
+    `
+  });
+  document.getElementById("sec").innerHTML=card;
+}
+ Read();
