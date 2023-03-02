@@ -36,7 +36,7 @@ function Read() {
     <span>${element.desc}</span>
     <span>${element.date}</span>
     <button id="edit" onclick="edit(${index})">edit</button>
-    <button id="delete">Delete</button>
+    <button id="delete"onclick="Delete(${index})">Delete</button>
 </li>
     `;
   });
