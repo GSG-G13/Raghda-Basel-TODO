@@ -2,6 +2,7 @@ const task = document.getElementById("Task");
 const desc = document.getElementById("Desc");
 const date = document.getElementById("date");
 const submit = document.getElementById("submit");
+
 const todo = [];
 let mediator;
 let Mood;
@@ -25,6 +26,7 @@ submit.onclick = function (eo) {
 
   console.log(Mood);
   Read();
+  Clear()
 };
 function Read() {
   let card = "";
@@ -50,3 +52,16 @@ const edit = (i) => {
   submit.value = "Edit";
   mediator = i;
 };
+
+
+function Clear(){
+  task.value = "";
+  desc.value ="";
+  date.value = "";
+
+}
+ Read();
+ const Delete = (i) => {
+ todo.splice(i,1);
+ Read(); 
+ }
