@@ -31,17 +31,19 @@ submit.onclick = function (eo) {
   localStorage.setItem("Task",JSON.stringify(oldTodos));
   Read();
   Clear()
-
 };
 function Read() {
   let card = "";
   todo.forEach((element, index) => {
     card += `
-    <li id="list">${element.task}
-    <span>${element.desc}</span>
-    <span>${element.date}</span>
+    <li id="list">
+    <h5 id="title">${element.task}</h5>
+    <p id="more">${element.desc}</p>
+    <span id="datastyle">${element.date}</span>
+    <br />
     <button id="edit" onclick="edit(${index})">edit</button>
     <button id="delete"onclick="Delete(${index})">Delete</button>
+    <hr/>
 </li>
     `;
   });

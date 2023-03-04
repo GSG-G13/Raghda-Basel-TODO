@@ -4,35 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
     <form>
-        <label for="Task"> 
-            Add your Task: 
-        </label>
-        <input type="text" name="Task" id="Task" /><br />
-
-        <label for="Desc">
-            Add Descriptin of your task: 
-        </label>
-        <textarea name="Desc" id="Desc" cols="30" rows="5" > </textarea>
-
-      <br>
-      <label for="date">
-        Choose Date to do the Task: 
-      </label>
-      <input type="date" id="date"/>
-
-      <br>
-      <input type="submit" id="submit">
+      <div>
+        <label for="Task"> Add your Task: </label>
+        <input type="text" name="Task" id="Task" />
+      </div>
+      <div>
+        <label for="Desc"> Add Descriptin of your task: </label>
+        <input type="text" name="Desc" id="Desc"/>
+      </div>
+      <div>
+        <label for="date"> Choose Date to do the Task: </label>
+        <input type="date" id="date" />
+      </div>
+      <input type="submit" id="submit" />
     </form>
-    <section id="sec">
-        <ul>
-            
-
-        </ul>
+    <section>
+      <ul id="sec">
+      </ul>
+      
     </section>
     <script src="main.js"></script>
   </body>
