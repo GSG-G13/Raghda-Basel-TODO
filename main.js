@@ -70,5 +70,6 @@ function Clear(){
  Read();
  const Delete = (i) => {
  todo.splice(i,1);
+ localStorage.Task = JSON.stringify(todo);
  Read(); 
  }
